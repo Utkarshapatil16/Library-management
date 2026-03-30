@@ -21,6 +21,7 @@ class Issue(models.Model):
     book = models.ForeignKey(Book,on_delete=models.CASCADE)
     issue_date = models.DateField(auto_now_add=True)
     return_date = models.DateField(null=True,blank=True)
+    due_date = models.DateField(null=True,blank=True)
 
     def save(self,*args,**kwargs):
         if not self.pk:

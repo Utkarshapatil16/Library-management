@@ -18,8 +18,13 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib import admin
 from django.urls import path,include
+from library import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('library.urls')),
+    path('', views.home ,name='home'),
+    path('return/<int:issue_id>/',
+    views.return_book, name='return_book')
+
 ]

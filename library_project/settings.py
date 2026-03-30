@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'library.apps.LibraryConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -117,3 +118,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+LOGIN_URL ='/admin/login'
+ALLOWED_HOSTS = ['*']
